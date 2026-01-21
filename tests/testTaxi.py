@@ -10,8 +10,10 @@ code = [i for i in doc['cells'] if i['cell_type']=='code']
 si = {}
 for i in code:
     for j in i['source']:
+
         if "#si-taxi" in j:
             exec("".join(i['source']))
+
 
 
 class testCases(unittest.TestCase):
